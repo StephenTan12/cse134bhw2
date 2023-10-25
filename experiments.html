@@ -5,6 +5,76 @@
     <title>Experiments</title>
 </head>
 <body>
-    <p>Some experiments</p>
+    <header>
+        <h1>Stephen's Experiments</h1>
+    </header>
+    <nav>
+        <h2>Navigation</h2>
+        <ul>
+            <li><a href="./index.html">Home</a></li>
+            <li><a href="./experiments.html">Experiments</a></li>
+        </ul>
+    </nav>
+    <main>
+        <section>
+            <h2>Style</h2>
+            <article>
+                <p>Let's play with some styling. This word is <span id="redWord">red</span></p>
+            </article>
+            <article>
+                <figure>
+                    <svg width="80" height="80">
+                        <circle cx="40" cy="40" r="30" stroke="red" stroke-width="4" fill="green" />
+                    </svg>
+                    <figcaption>A SVG</figcaption>
+                </figure>
+            </article>
+        </section>
+        <section>
+            <h2>Scripts</h2>
+            <article>
+                <figure>
+                    <canvas width="80" height="80" id="canvasIdentifier">
+                        No support for canvas tag.
+                    </canvas>
+                    <figcaption>A blue square drawn using JavaScript.</figcaption>
+                </figure>
+            </article>
+            <article>
+                <p>There will be an unplayable audio.</p>
+                <audio controls>
+                    <source src="someSource.mp3" type="audio/mpeg">
+                    <source src="anotherSource.mp3" type="audio/mpeg">
+                    No such audio!
+                </audio> 
+            </article>
+            <article>
+                <p>There will be an unplayable video.</p>
+                <video width="420" height="320" controls>
+                    <source src="someSource.mp4" type="video/mp4">
+                    No such video!
+                </video> 
+            </article>
+            <article>
+                <p>Testing out the iframe tag</p>
+                <iframe src="https://www.google.com" title="Google"></iframe> 
+            </article>
+        </section>
+    </main>
+    <footer>
+        <hr />
+        <pre>Created by Stephen Tan</pre>
+    </footer>
 </body>
+<style>
+    #redWord {
+        color: red;
+    }
+</style>
+<script>
+    const canvas = document.getElementById("canvasIdentifier");
+    const ctx = canvas.getContext("2d");
+    ctx.fillStyle = "blue";
+    ctx.fillRect(0, 0, 80, 80);
+</script>
 </html>

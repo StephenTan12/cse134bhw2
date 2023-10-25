@@ -2,9 +2,146 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <link rel="stylesheet" href="index.css">
     <title>Stephen's Portfolio</title>
 </head>
 <body>
-    <p>Some content</p>
+    <header>
+        <h1>Stephen's Portfolio</h1>
+    </header>
+    <nav>
+        <h2>Navigation</h2>
+        <ul>
+            <li><a href="./index.html">Home</a></li>
+            <li><a href="./experiments.html">Experiments</a></li>
+        </ul>
+    </nav>
+    <aside>
+        <ul>
+            <li><a href="#work-experience">Work Experience</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#contact-me">Contact Me</a></li>
+        </ul>
+    </aside>
+    <main>
+        <section>
+            <h2>Brief Overview</h2>
+            <p>Hi my name is <b>Stephen</b>. I am a Senior at UC San Diego majoring in Mathematics - Computer Science.</p>
+            <p>My favorite programming languages are as follows...</p>
+            <br />
+            <details>
+                <summary>Ordered List of my favorites</summary>
+                <div>
+                    <ol>
+                        <li><code>Kotlin</code></li>
+                        <li><code>Java</code></li>
+                        <li><code>Swift</code></li>
+                    </ol>
+                </div>
+            </details>
+        </section>
+        <section id="work-experience">
+            <h2>Work Experience</h2>
+            <article>
+                <h3><strong>Intuit Inc.</strong> | Software Engineer Intern</h3>
+                <p><em>June 2023 to September 2023</em></p>
+                <ul>
+                    <li>Worked on the <b>backend</b> team for Turbotax</li>
+                </ul>
+            </article>
+            <br />
+            <article>
+                <h3><strong>Intuit Inc.</strong> | Software Engineer Intern</h3>
+                <p><em>June 2022 to September 2022</em></p>
+                <ul>
+                    <li>Worked on <b>iOS</b> team for Turbotax</li>
+                </ul>
+            </article>
+            <br />
+            <template>
+                <article>
+                    <h3><strong></strong></h3>
+                    <p><em></em></p>
+                    <ul>
+                        <li></li>
+                    </ul>
+                </article>
+            </template>
+        </section>
+        <section id="skills">
+            <h2>Skills</h2>
+            <table>
+                <caption>Skills Table</caption>
+                <colgroup>
+                    <col>
+                </colgroup>
+                <tr>
+                    <th>Languages</th>
+                    <th>Frameworks</th>
+                </tr>
+                <tr>
+                    <td>
+                        Kotlin 
+                        <picture>
+                            <source type="image/jpeg" srcset="./images/superSmallKotlinIcon.jpg">
+                            <source type="image/jpeg" srcset="./images/downsizeKotlinIcon.jpg">
+                            <img src="./images/kotlinIcon.jpg" height="20" width="20" alt="kotlin icon">
+                        </picture>
+                    </td>
+                    <td>
+                        Spring
+                        <picture>
+                            <source type="image/webp" srcset="./images/superSmallSpringIcon.webp">
+                            <source type="image/jpeg" srcset="./images/downsizeSpringIcon.jpg">
+                            <img src="./images/springIcon.jpg" height="20" width="20" alt="Spring icon">
+                        </picture>
+                    </td>
+                </tr>
+            </table>
+            <br />
+        </section>
+        <section id="contact-me">
+            <h2>Contact Me</h2>
+            <form>
+                <fieldset>
+                    <legend>A form for contacting me...</legend>
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name">
+                    <br />
+                    <label for="email">Email:</label>
+                    <input type="text" id="email" name="email">
+                    <br />
+                    <label for="preferred-programming-languages">Preferred Programming Language:</label>
+                    <input list="preferred-programming-languages" name="preferred-programming-language" id="preferred-programming-language">
+                    <datalist id="preferred-programming-languages">
+                        <option value="Java">
+                        <option value="C++">
+                        <option value="Python">
+                    </datalist>
+                    <br />
+                    <label for="reason">Select a reason:</label>
+                    <select name="reason" id="reason">
+                        <optgroup label="Personal">
+                            <option>Greetings</option>
+                            <option>Inquiry</option>
+                        </optgroup>
+                        <optgroup label="Miscellaneous">
+                            <option value="other">Other</option>
+                        </optgroup>
+                    </select>
+                    <br />
+                    <label for="message-body">Message Body:</label>
+                    <br />
+                    <textarea id="message-body" name="message-body"></textarea>
+                    <br />
+                    <button>Submit</button>
+                </fieldset>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <hr />
+        <pre>Created by Stephen Tan</pre>
+    </footer>
 </body>
 </html>
