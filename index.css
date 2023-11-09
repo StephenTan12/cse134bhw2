@@ -92,7 +92,7 @@ fieldset {
 .nav-item-link {
     text-decoration: none;
     font-size: var(--nav-item-link-font-size, 1.5rem);
-    color: color(srgb 0 0 0);
+    color: color(0 0 0);
     font-weight: var(--nav-item-link-font-weight, 100);
     transition: var(--nav-item-transition, 0.5s);
 }
@@ -110,7 +110,7 @@ fieldset {
 }
 
 .nav-item-link:hover {
-    color: color-mix(in srgb, blue, lightBlue);
+    color: color-mix(srgb, blue, lightBlue);
 }
 
 .form-submit-button {
