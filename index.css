@@ -1,0 +1,127 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+:root {
+    --main-bg-color: #D3D3D3;
+    --fieldset-row-gap: 1.5dvh;
+    --nav-border-radius: 0 0 10px 10px;
+    --nav-items-gap: 3vw;
+    --nav-item-link-font-size: 1.5rem;
+    --nav-item-link-font-weight: 100;
+    --form-submit-button-max-width: 25%;
+    --nav-item-transition: 1s;
+}
+
+* {
+    font-family: "Roboto", Georgia, serif;
+}
+
+@media only screen and (min-width: 600px) {
+    body {
+        margin: 0 5vw 0 5vw; 
+    }
+    header {
+        padding-left: 1.5vw;
+    }
+    main {
+        padding: 0 1.5vw;
+    }
+    input {
+        max-width: 50%;
+    }
+    select {
+        max-width: 50%;
+    }
+    textarea {
+        max-width: 75%;
+    }
+    fieldset {
+        display: inline;
+    }
+} 
+
+@media only screen and (min-width: 1000px) {
+    input {
+        max-width: 25%;
+    }
+    select {
+        max-width: 25%;
+    }
+    textarea {
+        max-width: 50%;
+    }
+} 
+
+header {
+    background-color: var(--main-bg-color, #D3D3D3);
+}
+
+nav {
+    background-color: var(--main-bg-color, #D3D3D3);
+    border-radius: var(--nav-border-radius, 0 0 10px 10px)
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+main {
+    animation: fadeIn 1s;
+}
+
+article:has(+ article) {
+    margin-bottom: 2vh;
+}
+
+fieldset {
+    display: flex;
+    flex-direction: column;
+    row-gap: var(--fieldset-row-gap, 1.5dvh);
+    justify-content: space-around;
+}
+
+.nav-items {
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+    gap: var(--navigation-items-gap, 3vw);
+    justify-content: flex-start;
+}
+
+.nav-item-link {
+    text-decoration: none;
+    font-size: var(--nav-item-link-font-size, 1.5rem);
+    color: color(srgb 0 0 0);
+    font-weight: var(--nav-item-link-font-weight, 100);
+    transition: var(--nav-item-transition, 0.5s);
+}
+
+.nav-item {
+    transition: var(--nav-item-transition, 0.5s);
+}
+
+.nav-item:hover {
+    transform: scale(1.25);
+}
+
+.nav-item:active {
+    background-color: transparent;
+}
+
+.nav-item-link:hover {
+    color: color-mix(in srgb, blue, lightBlue);
+}
+
+.form-submit-button {
+    max-width: var(--form-submit-button-max-width, 25%);
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
