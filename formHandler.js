@@ -50,7 +50,7 @@ function handleComments(event) {
         comments.classList.add("char-error");
     } else if (remainingCharacterCount <= 20) {
         form_errors.max_length = false;
-        comments.classList.remove("char-error");
+        comments.classList.add("char-error");
     } else {
         form_errors.max_length = false;
         comments.classList.remove("char-error");
