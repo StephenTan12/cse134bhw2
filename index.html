@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-mode="dark">
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="index.css">
@@ -16,6 +16,7 @@
         </ul>
     </nav>
     <main>
+        <button id="darkmode-toggle">Toggle Dark Mode</button>
         <section id="overview">
             <h2>Brief Overview</h2>
             <p>Hi my name is <b>Stephen</b>. I am a Senior at UC San Diego majoring in Mathematics - Computer Science.</p>
@@ -83,34 +84,24 @@
         </section>
         <section id="contact-me">
             <h2>Contact Me</h2>
-            <form>
+            <form action="https://httpbin.org/post" method="post" id="form">
                 <fieldset>
-                    <legend>A form for contacting me...</legend>
                     <label for="name">Name:</label>
-                    <input type="text" id="name" name="name">
+                    <input type="text" id="name" name="name" required>
+
                     <label for="email">Email:</label>
-                    <input type="text" id="email" name="email">
-                    <label for="preferred-programming-language">Preferred Programming Language:</label>
-                    <input list="languages" name="preferred-programming-language" id="preferred-programming-language">
-                    <datalist id="languages">
-                        <option value="Java">
-                        <option value="C++">
-                        <option value="Python">
-                        <option value="Other">
-                    </datalist>
-                    <label for="reason">Select a reason:</label>
-                    <select name="reason" id="reason">
-                        <optgroup label="Personal">
-                            <option>Greetings</option>
-                            <option>Inquiry</option>
-                        </optgroup>
-                        <optgroup label="Miscellaneous">
-                            <option value="other">Other</option>
-                        </optgroup>
-                    </select>
-                    <label for="message-body">Message Body:</label>
-                    <textarea id="message-body" name="message-body"></textarea>
-                    <button class="form-submit-button">Submit</button>
+                    <input type="email" id="email" name="email" required>
+
+                    <label for="comments">Comments:</label>
+                    <textarea id="comments" name="comments" maxlength="300" required></textarea>
+                    <div class="comments-description">
+                        <output for="comments" class="information">Remaining Characters: 300</output>
+                        <output for="comments" class="error"></output>
+                    </div>
+
+                    <input type="hidden" id="possible_bot" name="possible_bot" value="true">
+
+                    <input type="submit" id="form-submit-button" value="Submit">
                 </fieldset>
             </form>
         </section>
@@ -119,5 +110,7 @@
         <hr>
         <pre>Created by Stephen Tan</pre>
     </footer>
+    <script src="darkModeHandler.js"></script> 
+    <script src="formHandler.js"></script> 
 </body>
 </html>

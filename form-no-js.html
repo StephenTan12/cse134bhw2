@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Form-No-JS</title>
+</head>
+<style>
+    fieldset {
+        display: flex;
+        flex-direction: column;
+        row-gap: var(--fieldset-row-gap, 1.5dvh);
+        justify-content: space-around;
+    }
+
+    .form-submit-button {
+        max-width: 25%;
+    }
+
+    input:invalid {
+        border: 2px solid red;
+    }
+</style>
+<body>
+    <form action="https://httpbin.org/post" method="post">
+        <fieldset>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="comments">Comments:</label>
+            <input type="text" id="comments" name="comments" maxlength="300" pattern="^[a-zA-Z0-9.,?!:;'\-]*$" required>
+            <output for="comments" class="error"></output>
+            <output for="comments" class="information"></output>
+
+            <input type="hidden" id="possible_bot" name="possible_bot" value="true">
+
+            <input type="submit" id="form-submit-button" value="Submit">
+        </fieldset>
+    </form>
+</body>
+</html>
