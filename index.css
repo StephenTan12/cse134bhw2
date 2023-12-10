@@ -99,6 +99,10 @@ fieldset {
     justify-content: space-around;
 }
 
+rating-widget::part(star) {
+    /* do stuff */
+}
+
 .nav-items {
     background-color: inherit;
     display: flex;
